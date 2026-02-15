@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimco | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #6e57e0;
+            --text: #242329;
+            --bg-body: #e2d9ff;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-card {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 1100px;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            position: relative;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 10px 0;
+            z-index: 100;
+        }
+
+        .logo { font-weight: 600; font-size: 1.4rem; color: var(--text); }
+
+        nav ul { display: flex; list-style: none; gap: 20px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 50px 1fr 1fr;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 60px;
+        }
+
+        .socials { display: flex; flex-direction: column; gap: 20px; color: var(--primary); }
+
+        .hero-info h1 { font-size: 3.5rem; color: var(--text); line-height: 1.2; }
+        .hero-info h3 { color: #666; font-weight: 400; margin-bottom: 20px; }
+        .hero-info p { color: #888; max-width: 400px; margin-bottom: 30px; }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover { background: #5a44cc; transform: translateY(-3px); }
+
+        .image-container { display: flex; justify-content: flex-end; }
+
+        .blob {
+            width: 350px;
+            height: 350px;
+            background: var(--primary);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blob img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Sections */
+        section { padding: 60px 0; border-top: 1px solid #f0f0f0; }
+        h2 { font-size: 2.2rem; margin-bottom: 25px; color: var(--text); }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .contact-form input:focus { border-color: var(--primary); }
+
+        .scroll-down {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <nav>
+            <div class="logo">Nimco</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#portfolio">Contact</a></li>
+                <li><i data-lucide="moon" style="cursor: pointer;"></i></li>
+            </ul>
+        </nav>
+
+        <section id="home" class="hero" style="border:none;">
+            <div class="socials">
+                <i data-lucide="linkedin"></i>
+                <i data-lucide="globe"></i>
+                <i data-lucide="github"></i>
+            </div>
+
+            <div class="hero-info">
+                <h1>Hi, I'm Nimco</h1>
+                <h3>Frontend Developer</h3>
+                <p>High level experience in web design and development knowledge, producing quality work.</p>
+                <a href="#contact" class="btn">Contact Me <i data-lucide="send" size="18"></i></a>
+                
+                <div class="scroll-down">
+                    <i data-lucide="mouse"></i>
+                    <span>Scroll down</span>
+                    <i data-lucide="arrow-down" size="14"></i>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <div class="blob">
+                    <img src="be26c427-a3d6-4b54-b3e0-37d7d0e39311.jfif" alt="Nimco">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p style="color: #666; line-height: 1.8; max-width: 800px;">
+                I am Nimco, a dedicated Frontend Developer passionate about building beautiful and functional user interfaces. 
+                With a focus on clean code and modern design principles, I aim to provide the best digital experiences for users.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <div style="background:#f4f1ff; padding:20px; border-radius:15px;">
+                    <h3>HTML/CSS</h3>
+                    <p>Advanced Level</p>
+                </div>
+                <div style="background:#f4f1ff; padding:20px; border-radius:15px;">
+                    <h3>JavaScript</h3>
+                    <p>Intermediate Level</p>
+                </div>
+                <div style="background:#f4f1ff; padding:20px; border-radius:15px;">
+                    <h3>UI Design</h3>
+                    <p>Professional</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="https://formspree.io/f/your-email" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message <i data-lucide="mail" size="18"></i></button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Icons activation
+        lucide.createIcons();
+    </script>
+</body>
+</html>
